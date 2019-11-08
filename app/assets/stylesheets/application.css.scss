@@ -15,3 +15,23 @@
  */
 
 @import "semantic-ui";
+
+/* reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+/* root font-size is in html */
+html {
+    // font-size: 85.7%;
+    /* to allow zoom in/out for user */
+}
+
+body {
+    /* To avoid for margin and padding to be added to height and width */
+    box-sizing: border-box;
+    font-size: 85.7%;
+}
