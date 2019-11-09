@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
-  def new
+  before_action :redirect_if_logged_in, only: %i[new create]
 
-  end
+  def new; end
 
   def create
     user = User.find_by(username: params[:session][:username])
@@ -21,5 +21,14 @@ class SessionsController < ApplicationController
     flash[:success] = "You have successfully signed out"
 
     redirect_to login_path
+  end
+
+  private
+
+  def redirect_if_logged_in
+    if logged_in?
+      flash[:error] = "You are already logged in"
+      redirect_to root_path
+    end
   end
 end
