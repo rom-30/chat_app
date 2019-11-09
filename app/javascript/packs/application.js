@@ -18,5 +18,14 @@ require("semantic-ui-sass")
 // const imagePath = (name) => images(name, true)
 
 $(document).on('turbolinks:load', () => {
+  // To activate dropdown from navbar
   $('.ui.dropdown').dropdown();
+
+  // To activate flash messages
+  $('.message .close').on('click', function() {
+    $(this)
+    .closest('.message')
+    .transition('fade');
+  });
 });
+
