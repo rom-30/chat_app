@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       flash[:success] = "You have successfully signed in"
       redirect_to root_path
     else
-      flash.now[:error] = "Please try again, with the correct credentials this time okay!!!"
+      flash.now[:error] = "Try again but this time with the correct credentials okay!!!"
       render :new
     end
   end
