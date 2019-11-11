@@ -12,11 +12,17 @@ consumer.subscriptions.create("ChatRoomChannel", {
   received(data) {
     // Called when there's incoming data on the websocket for this channel
     $('#message-container').append(data.content)
+
     const scrollToBottom = () => {
       if ($('#messages').length > 0) {
         $('#messages').scrollTop($('#messages')[0].scrollHeight);
       }
     }
     scrollToBottom()
+
+    // No need for EventListener since we will only execute that code
+    // if a message is sent
+    const te = document.querySelector('#message_body');
+    te.value = "";
   }
 });
