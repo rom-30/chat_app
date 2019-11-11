@@ -2,53 +2,36 @@
   <i class="circular teal chat icon"></i>
   Type something
 </h4>
+<style>
+  .mk {
+    visibility: hidden;
+  }
+</style>
   <div class="ui stackable two column grid">
   <!-- May want to use the one below -->
   <!-- <div class="ui grid container"> -->
     <div class="twelve wide column">
       <div class="ui fluid raised card card__height">
-        <div class="content">
+        <div class="content" id="messages">
           <!-- Small feed can be added if needed -->
-          <div class="ui feed">
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                   <a>Elliot Fu</a> added <a>Jenny Hess</a> as a friend
-                </div>
-              </div>
-            </div>
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                   <a>Stevie Feliciano</a> added <a>Elliot Fu</a> as a friend
-                </div>
-              </div>
-            </div>
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                   <a>Helen Troy</a> added <a>Christian Rocha</a> as a friend
-                </div>
-              </div>
-            </div>
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                   <em>Christian Rocha</em>: Test message
-                </div>
-              </div>
-            </div>
+          <div class="ui feed" id="message-container">
+            <%= render @messages %>
           </div>
         </div>
         <div class="extra content">
-          <form class="ui reply form">
-              <div class="field">
-                <div class="ui fluid icon input">
-                  <input type="text" placeholder="Type message...">
-                  <i class="bordered inverted teal edit icon"></i>
-                </div>
+          <%#= raise %>
+          <%= form_for(@message, html: { class: "ui reply form", autocomplete: "off" }, url: message_path, remote: true, id: "test")  do |f| %>
+            <div class="field">
+              <div class="ui fluid icon input">
+              <%= f.text_field :body, placeholder: "Type your message here" %>
+               <i class="bordered inverted teal edit icon"></i>
+              <%= f.button '<i class="bordered inverted teal edit icon mk"></i>'.html_safe %>
+
               </div>
-            </form>
+            </div>
+
+          <% end %>
+
         </div>
       </div>
     </div>

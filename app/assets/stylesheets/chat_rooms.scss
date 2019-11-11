@@ -6,6 +6,11 @@
   height: 45rem;
 }
 
+#messages {
+  height: 15em;
+  overflow: auto;
+}
+
 // add for every odd message, display name with different colour
 // Or associate a user to a colour
 // Or give the choice to choose
