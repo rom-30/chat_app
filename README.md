@@ -24,8 +24,7 @@ $ rails s
 ## To create your own user
 ```ruby
 # seeds.rb
-User.create!(username: 'type_a_username',
-		   	password: 'type_a_password')
+User.create!(username: 'type_a_username', password: 'type_a_password')
 ```
 
 ## Gems Installed
