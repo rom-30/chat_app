@@ -1,4 +1,5 @@
 puts 'Cleaning database...'
+Message.destroy_all
 User.destroy_all
 
 puts 'Creating Users...'
@@ -19,4 +20,4 @@ users_attributes = [
 ]
 
 User.create!(users_attributes)
-puts 'Finished'
+puts "#{User.count} users created"
