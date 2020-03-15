@@ -5,7 +5,7 @@
 **2.** [Learn the basics of Semantic](https://semantic-ui.com/introduction/getting-started.html) - UI framework designed for theming
 
 
-##User Stories
+## User Stories
 ![Schema](./app/assets/images/schema.png)
 
 1. As a User I can sign in
@@ -39,7 +39,7 @@ User.create!(username: 'type_a_username',
 
 * [pry-rails](https://github.com/rweng/pry-rails) - Use Pry as your rails console
 
-##If I were to deploy, I would at least
+## If I were to deploy, I would at least
 * Install [devise](https://github.com/heartcombo/devise)
 * Install [pundit](https://github.com/varvet/pundit)
 * Make it fully responsive
