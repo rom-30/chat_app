@@ -20,9 +20,8 @@ consumer.subscriptions.create("ChatRoomChannel", {
     }
     scrollToBottom()
 
-    // No need for EventListener since we will only execute that code
-    // if a message is sent
-    const te = document.querySelector('#message_body');
-    te.value = "";
+    // To clear input
+    const input = document.querySelector('#message_body');
+    input.value = "";
   }
 });
