@@ -23,7 +23,7 @@
           <%= form_for(@message, html: { class: "ui reply form", autocomplete: "off" }, url: message_path, remote: true, id: "test")  do |f| %>
             <div class="field">
               <div class="ui fluid icon input">
-              <%= f.text_field :body, placeholder: "Type your message here" %>
+              <%= f.text_field :body, placeholder: "Type your message here", autofocus: true %>
                <i class="bordered inverted teal edit icon"></i>
               <%= f.button '<i class="bordered inverted teal edit icon mk"></i>'.html_safe %>
 
