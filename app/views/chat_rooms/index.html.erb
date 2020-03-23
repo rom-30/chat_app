@@ -7,7 +7,7 @@
     visibility: hidden;
   }
 </style>
-  <div class="ui stackable two column grid">
+  <div class="ui stackable centered grid">
   <!-- May want to use the one below -->
   <!-- <div class="ui grid container"> -->
     <div class="twelve wide column">
@@ -18,10 +18,11 @@
             <%= render @messages %>
           </div>
         </div>
-        <div class="extra content">
+        <div class="extra content md:flex">
           <%#= raise %>
           <%= form_for(@message, html: { class: "ui reply form", autocomplete: "off" }, url: message_path, remote: true, id: "test")  do |f| %>
             <div class="field">
+              <%= f.label "You: #{current_user.username}" %>
               <div class="ui fluid icon input">
               <%= f.text_field :body, placeholder: "Type your message here", autofocus: true %>
                <i class="bordered inverted teal edit icon"></i>
@@ -32,24 +33,6 @@
 
           <% end %>
 
-        </div>
-      </div>
-    </div>
-
-    <div class="four wide column">
-      <div class="ui raised card card__height">
-        <div class="content">
-          <div class="ui fluid inverted vertical menu">
-            <a class="active item">
-              Home
-            </a>
-            <a class="item">
-              Messages
-            </a>
-            <a class="item">
-              Friends
-            </a>
-          </div>
         </div>
       </div>
     </div>
