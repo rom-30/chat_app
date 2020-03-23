@@ -1,4 +1,11 @@
 # Chat App
+
+[Download the project](https://github.com/rom-30/chat_app/archive/master.zip) or clone it
+
+```bash
+$ git clone git@github.com:rom-30/chat_app.git
+```
+
 ## Objectives
 **1.** [Learn the basics of Action Cable](https://guides.rubyonrails.org) which integrates WebSockets with the rest of your Rails application.
 
@@ -21,9 +28,13 @@ $ yarn install
 $ rails db:create db:migrate db:seed
 $ rails s
 ```
+## Info
+* Rails: 6.0.1
+* Ruby: 2.6.3
+
 ## To create your own user
 ```ruby
-# seeds.rb
+# seeds.rb or rails c
 User.create!(username: 'type_a_username', password: 'type_a_password')
 ```
 
